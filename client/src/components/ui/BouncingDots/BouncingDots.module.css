@@ -1,0 +1,30 @@
+.bouncingLoader {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.bouncingLoader>div {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: var(--radius-full);
+    background: var(--text-secondary);
+    opacity: 1;
+    animation: bouncing-loader 0.6s infinite alternate;
+    transition: opacity var(--transition-base);
+}
+
+@keyframes bouncing-loader {
+    to {
+        opacity: 0.1;
+        transform: translateY(calc(var(--dot-size) * -0.6));
+    }
+}
+
+.bouncingLoader>div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bouncingLoader>div:nth-child(3) {
+    animation-delay: 0.4s;
+}

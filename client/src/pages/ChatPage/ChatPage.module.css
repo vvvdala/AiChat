@@ -1,0 +1,113 @@
+.chatWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.chatBody {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-6) var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.chatBody::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatBody::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: var(--radius-pill);
+}
+
+.message {
+    display: flex;
+    width: 100%;
+}
+
+.messageBot {
+    justify-content: flex-start;
+}
+
+.messageUser {
+    justify-content: flex-end;
+}
+
+.messageInner {
+    max-width: 700px;
+    padding: var(--space-4);
+    line-height: var(--line-height-base);
+}
+
+.messageBot .messageInner {
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) var(--radius-xs);
+    background: var(--bubble-bot-bg);
+    color: var(--bubble-bot-text);
+}
+
+.messageUser .messageInner {
+    border-radius: var(--radius-pill) var(--radius-pill) var(--radius-xs) var(--radius-pill);
+    background: var(--bubble-user-bg);
+    color: var(--bubble-user-text);
+}
+
+.messageContent {
+    font-size: var(--font-size-base);
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.messageContent li {
+    margin-left: var(--space-5);
+}
+
+.messageContent code {
+    font-family: var(--font-mono);
+    background: var(--bg-elevated);
+    padding: 2px 6px;
+    border-radius: var(--radius-xs);
+}
+
+.messageContent pre {
+    background: var(--bg-elevated);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+.messageContent p {
+    margin: 0 0 var(--space-3) 0;
+}
+
+.messageContent p:last-child {
+    margin-bottom: 0;
+}
+
+.messageContent table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: var(--space-4);
+}
+
+.messageContent th,
+.messageContent td {
+    border: 1px solid var(--border);
+    padding: var(--space-2);
+}
+
+.messageContent hr {
+    border: none;
+    height: 1px;
+    background: var(--border-strong);
+    margin: var(--space-2) 0;
+}
+
+.loader {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}

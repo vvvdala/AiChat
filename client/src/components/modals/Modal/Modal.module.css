@@ -1,0 +1,111 @@
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: #00000070;
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn var(--transition-fast);
+}
+
+.modal {
+    background-color: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    animation: slideUp var(--transition-fast);
+}
+
+.modalHeader {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.closeBtn {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: none;
+
+    font-size: var(--font-size-base);
+    color: var(--text-muted);
+
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.closeBtn:hover {
+    color: var(--text-secondary);
+}
+
+.closeBtn:active {
+    transform: scale(0.98);
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-2);
+}
+
+.btnPrimary {
+    width: 100%;
+    padding: var(--space-3);
+
+    background: var(--accent);
+    color: var(--text-on-accent);
+
+    border: none;
+    border-radius: var(--radius-sm);
+
+    font-family: var(--font);
+    font-size: var(--font-size-base);
+
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btnPrimary:hover {
+    background: var(--accent-hover);
+}
+
+.btnPrimary:active {
+    background: var(--accent-active);
+}
+
+.btnSecondary {
+    width: 100%;
+    padding: var(--space-3);
+
+    background: transparent;
+    color: var(--text-primary);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    font-family: var(--font);
+    font-size: var(--font-size-base);
+
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btnSecondary:hover {
+    border-color: var(--border-accent);
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
