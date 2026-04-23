@@ -27,7 +27,6 @@ async function start() {
   try {
     app.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);
-      console.log(process.env.GEMINI_API_KEY);
     });
   } catch (error) {
     console.log(error);
